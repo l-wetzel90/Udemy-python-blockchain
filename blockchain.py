@@ -2,7 +2,7 @@ from functools import reduce
 import hashlib as hl
 from collections import OrderedDict
 import json
-from operator import index
+import pickle
 
 from hash_util import hash_string_265, hash_block
 
@@ -27,6 +27,15 @@ participants = {'Loren'}
 
 
 def load_data():
+    # read files with pickle
+    # with open('blockchain.p', mode='rb') as f:
+    # file_content = pickle.loads(f.read())
+
+    # global blockchain
+    # global open_transactions
+    # blockchain = file_content['chain']
+    # open_transactions = file_content['ot']
+
     with open('blockchain.txt', mode='r') as f:
         file_content = f.readlines()
         global blockchain
@@ -60,6 +69,14 @@ def save_data():
         f.write(json.dumps(blockchain))
         f.write('\n')
         f.write(json.dumps(open_transactions))
+
+    # pickle save data
+    # with open('blockchain.p', mode='wb') as f:
+    #     save_data = {
+    #         'chain': blockchain,
+    #         'ot': open_transactions
+    #     }
+    #     f.write(pickle.dumps(save_data))
 
 
 def valid_proof(transactions, last_hash, proof):
