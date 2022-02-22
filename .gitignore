@@ -159,6 +159,7 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 
-#personal files to ignore
+#personal directories and files to ignore
 udemy-python-assignments/
 oop/
+activate.txt
