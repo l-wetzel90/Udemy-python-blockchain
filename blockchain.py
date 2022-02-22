@@ -145,12 +145,12 @@ class Blockchain:
     # The optional one is optional because it has a default value => [1]
 
     def add_transaction(self, recipient, sender, signature, amount=1.0):
-        """Append a new value as well as the last blockchain value to the blockchain
+        """ Append a new value as well as the last blockchain value to the blockchain.
 
         Arguments:
-            :sender: The sender of coins
-            :recipient: the recipient of the coins
-            :amount: amount of coins sent with tans (default = 1.0)
+            :sender: The sender of the coins.
+            :recipient: The recipient of the coins.
+            :amount: The amount of coins sent with the transaction (default = 1.0)
         """
         # transaction = {
         #     'sender': sender,

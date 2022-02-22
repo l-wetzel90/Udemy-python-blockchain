@@ -1,5 +1,4 @@
 from collections import OrderedDict
-from inspect import signature
 
 from utility.printable import Printable
 
@@ -10,7 +9,7 @@ class Transaction(Printable):
     Attributes:
         :sender: The sender of the coins.
         :recipient: The recipient of the coins.
-        :signature: The signature of the transaction
+        :signature: The signature of the transaction.
         :amount: The amount of coins sent.
     """
 
