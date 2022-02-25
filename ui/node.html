@@ -383,17 +383,17 @@
             if (this.view === "chain") {
               // Load blockchain data
               var vm = this;
-              (this.dataLoading = true),
-                axios
-                  .get("/chain")
-                  .then(function (response) {
-                    vm.blockchain = response.data;
-                    vm.dataLoading = false;
-                  })
-                  .catch(function (error) {
-                    vm.dataLoading = false;
-                    vm.error = "Something went wrong.";
-                  });
+              this.dataLoading = true;
+              axios
+                .get("/chain")
+                .then(function (response) {
+                  vm.blockchain = response.data;
+                  vm.dataLoading = false;
+                })
+                .catch(function (error) {
+                  vm.dataLoading = false;
+                  vm.error = "Something went wrong.";
+                });
             } else {
               // Load transaction data
               var vm = this;
