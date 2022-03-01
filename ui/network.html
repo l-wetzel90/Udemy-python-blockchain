@@ -112,7 +112,7 @@
               })
               .catch(function (error) {
                 vm.success = null;
-                vm.error - error.response.data.message;
+                vm.error = error.response.data.message;
               });
           },
           onLoadNodes: function () {
@@ -127,7 +127,7 @@
               })
               .catch(function (error) {
                 vm.success = null;
-                vm.error - error.response.data.message;
+                vm.error = error.response.data.message;
               });
           },
           onRemoveNode: function (node_url) {
@@ -142,7 +142,7 @@
               })
               .catch(function (error) {
                 vm.success = null;
-                vm.error - error.response.data.message;
+                vm.error = error.response.data.message;
               });
           },
         },
